@@ -1,0 +1,64 @@
+/* Styles for WebKit (Chrome and Safari) */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .shape-container {
+    top: 80px;
+    right: 12px;
+  }
+  .shape-container::before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 80px solid transparent;
+    border-right: 80px solid transparent;
+    border-bottom: 50px solid var(--triangleColor);
+  }
+  .shape-container::after {
+    display: none;
+  }
+}
+
+/* Styles for Firefox */
+@-moz-document url-prefix() {
+  .shape-container {
+    top: calc(100% - 265px);
+    left: 12px;
+  }
+  .shape-container::after {
+    content: "";
+    display: block;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 80px solid transparent;
+    border-right: 80px solid transparent;
+    border-top: 50px solid var(--triangleColor);
+  }
+  .shape-container::before {
+    display: none;
+  }
+  .main-text {
+    padding-top: 20px;
+  }
+}
+
+/* Styles for Edge (Chrome and Safari) */
+@supports (-ms-ime-align: auto) {
+  .shape-container {
+    top: 80px;
+    right: 12px;
+  }
+  .shape-container::before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 80px solid transparent;
+    border-right: 80px solid transparent;
+    border-bottom: 50px solid var(--triangleColor);
+  }
+  .shape-container::after {
+    display: none;
+  }
+}

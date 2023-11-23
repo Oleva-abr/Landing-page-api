@@ -1,0 +1,75 @@
+:root {
+  --backgroundColor: #fbfbfb;
+  --backgroundCardColor: #f3f5f6;
+  --primaryColor: #000;
+  --secondaryColor: #ffb800;
+  --textWhiteColor: #fff;
+  --triangleColor: #3683f7;
+  --containerWidth: 1160px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto;
+  margin: 0;
+  padding: 0;
+  background-color: var(--backgroundColor);
+}
+
+@font-face {
+  font-family: "Bebas Neue";
+  src: url("../fonts/Bebas_Neue/BebasNeue-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+.page {
+  display: grid;
+  grid-template-areas: "header" "content" "footer";
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  padding-bottom: 55px;
+  padding-top: 151px;
+  font-family: Bebas Neue;
+  text-align: center;
+  color: var(--primaryColor);
+  font-size: 48px;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.container {
+  max-width: var(--containerWidth);
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}

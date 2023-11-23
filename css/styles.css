@@ -1,0 +1,169 @@
+@import "main.css";
+@import "browsers.css";
+
+#cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 70px 30px;
+}
+
+.card-container {
+  position: relative;
+  margin: 0 auto;
+}
+.card-overlay {
+  width: 360px;
+  background-color: var(--backgroundCardColor);
+  padding: 71px 30px 26px;
+  text-align: center;
+}
+
+.card-overlay p {
+  font-size: 18px;
+  text-align: center;
+}
+
+.card-overlay p:last-child {
+  font-weight: bold;
+}
+
+.header {
+  display: flex;
+}
+
+.footer,
+.header {
+  align-items: center;
+  height: 70px;
+  background-color: var(--primaryColor);
+}
+
+.header :first-child,
+.footer :first-child {
+  color: var(--secondaryColor);
+  text-transform: capitalize;
+}
+
+.header p,
+.footer p,
+.header span {
+  color: var(--textWhiteColor);
+  margin-right: 10px;
+}
+
+.amount-wrapper {
+  position: absolute;
+  width: 240px;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+  background-color: var(--textWhiteColor);
+  padding-top: 30px;
+  padding-bottom: 22px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.amount-wrapper p {
+  margin: 0 auto;
+  color: #000;
+  text-align: center;
+  font-family: Bebas Neue;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.amount-wrapper span {
+  font-size: 18px;
+}
+
+.best::before {
+  content: "Best Value";
+  position: absolute;
+  text-align: center;
+  background-color: var(--secondaryColor);
+  font-size: 12px;
+  right: 0;
+  top: 0;
+  height: 14px;
+  width: 80px;
+}
+
+.sale::before {
+  position: absolute;
+  content: url("../images/50OFF.svg");
+  top: -14px;
+  left: -14px;
+}
+
+.amount-wrapper .old-price {
+  position: absolute;
+  color: #929292;
+  text-decoration: line-through;
+  font-size: 16px;
+  font-weight: 400;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.svg-button {
+  display: inline-flex;
+  position: relative;
+}
+
+.button-text {
+  position: absolute;
+  display: block;
+  top: 45%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  color: var(--textWhiteColor);
+  font-size: 18px;
+}
+
+.square {
+  width: 160px;
+  height: 135px;
+  background-color: var(--triangleColor);
+}
+
+.main-text,
+.seconary-text {
+  color: var(--textWhiteColor);
+  text-align: center;
+}
+
+.main-text {
+  font-family: Bebas Neue;
+  font-size: 72px;
+  margin: 0;
+}
+
+.seconary-text {
+  font-size: 12px;
+  margin: 0;
+}
+.shape-container {
+  position: absolute;
+}
+.shape-container {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  cursor: pointer;
+  animation: pulse 1s infinite;
+}
+
+.visible {
+  opacity: 1;
+  transform: scale(1);
+  animation: moveUpDown 2s infinite;
+}
+
+@keyframes moveUpDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
