@@ -27,11 +27,8 @@ export function renderCards(data) {
             <div class="card-overlay">
               <p>${item.name_prod}</p>
               <p>${item.license_name}</p>
-              <a id="download" data-type="download" href=${
-                item.link
-              } class="svg-button"
-                ><img src="images/button.png" alt="button Download" data-type="download"/>
-               
+              <a id="download" data-type="download" href=${item.link}>
+              <img src="images/button.png" alt="button Download" data-type="download"/>
               </a>
             </div>
           </li>`
