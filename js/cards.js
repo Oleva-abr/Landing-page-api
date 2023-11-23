@@ -30,8 +30,8 @@ export function renderCards(data) {
               <a id="download" data-type="download" href=${
                 item.link
               } class="svg-button"
-                ><img src="images/button.svg" alt="button Download" data-type="download"/>
-                <span data-type="download" class="button-text">DOWNLOAD</span>
+                ><img src="images/button.png" alt="button Download" data-type="download"/>
+               
               </a>
             </div>
           </li>`
