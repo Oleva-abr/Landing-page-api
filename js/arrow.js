@@ -9,7 +9,6 @@ export function handleDownloadClick(event) {
 
   !isExsist &&
     setTimeout(() => {
-      console.log("isExsist:", isExsist);
       createArrow();
       const arrow = document.querySelector(".shape-container");
       isExsist = !isExsist;
