@@ -157,3 +157,9 @@
     transform: translateY(-10px);
   }
 }
+
+@media (max-width: 412px) {
+  .shape-container {
+    display: none;
+  }
+}
