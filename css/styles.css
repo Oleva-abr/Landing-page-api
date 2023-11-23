@@ -110,16 +110,6 @@
   position: relative;
 }
 
-.button-text {
-  position: absolute;
-  display: block;
-  top: 45%;
-  left: 45%;
-  transform: translate(-50%, -50%);
-  color: var(--textWhiteColor);
-  font-size: 18px;
-}
-
 .square {
   width: 160px;
   height: 135px;
